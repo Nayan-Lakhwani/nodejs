@@ -1,0 +1,32 @@
+
+ <form style="float:left" action="/api/members" class="mb-4" method="POST">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" class="form-control">
+    </div>
+    <input type="submit" value="Add Member" class="btn btn-primary block">
+</form>
+
+<br><br><br><br><br><br><br>
+ <form  style="float: left"action="/api/members" class="mb-4" method="GET">
+    <input type="submit" value="Show Members" class="btn btn-success">
+</form>
+ <form style="float: left" action="/api/members" class="mb-4" method="PUT">
+    <input type="submit" value="Update Member" class="btn btn-info ">
+</form>
+ <form style="float: left" action="/api/members" class="mb-4" method="DELETE">
+    <input type="submit" value="Delete Member" class="btn btn-warning">
+</form>
+<br><br><br> <br><br><br>  
+
+<h1 class="text-center mb-3">{{title}}</h1>
+<h4>Members</h4>
+<ul class="list-group">
+ {{#each members}}
+ <li class="list-group-item">{{this.name}}: {{this.email}}</li>
+ {{/each}}
+</ul>
